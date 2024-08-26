@@ -1,0 +1,117 @@
+<div class="mt-4 d-flex flex-row">
+  <h1 class="display-1" xmlns="http://www.w3.org/1999/html">{{heading}}</h1>
+  <span class="flex-grow-1"></span>
+  <a class="btn btn-sm responsive-info-button align-self-end mb-3"
+     (click) = goToEdit();
+     aria-label="Show horse details"
+     style="border: 1px solid black;">
+    <i class="bi bi-pencil"> Edit</i>
+  </a>
+</div>
+<br>
+
+
+<form #form="ngForm" [class.was-validated]="form.submitted">
+  <div class="row">
+    <!-- Start name and date of birth row -->
+    <div class="mb-2 col-lg-6">
+      <!-- When nesting rows, always make row > col-* > row. The Bootstrap classes do not work right when an element is both col* and row -->
+      <div class="row">
+        <label for="horseName" class="col-form-label text-md-end text-muted col-md-2 col-lg-4">
+          Name
+        </label>
+        <div class="col-md-10 col-lg-8"
+        >
+          <p id="horseName" class="col-form-label col-md-2 col-lg-4">{{horse.name}}</p>
+          <div class="invalid-feedback">
+            <!-- This is shown, when the form validation deems the name input to be invalid -->
+            Name is required
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-2 col-lg-6">
+      <div class="row">
+        <label for="horseDateOfBirth" class="col-form-label text-md-end text-muted col-md-2 col-lg-4">
+          Date of Birth
+        </label>
+        <div class="col-md-10 col-lg-8"
+        >
+          <!-- pattern and placeholder are fallbacks for browser, that use a simple text input for type="date"
+               The date format of the plain HTML date input, in browser that support it is, sadly, not changeable in a cross-browser way
+            -->
+          <p id="horseDateOfBirth" class="col-form-label col-md-2 col-lg-4">{{dateOfBirth}}</p>
+          <div class="invalid-feedback">
+            Date of birth is required
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End name and date of birth row -->
+  </div>
+
+  <div class="row">
+    <!-- Start sex row -->
+    <div class="mb-2 col-lg-6">
+      <div class="row">
+        <label for="horseSex" class="col-form-label text-md-end text-muted col-md-2 col-lg-4">
+          Sex
+        </label>
+        <div class="col-md-10 col-lg-8"
+        >
+          <p id="horseSex" class="col-form-label col-md-2 col-lg-4">{{horse.sex}}</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-2 col-lg-6">
+      <div class="row">
+        <label for="horseBreed" class="col-form-label text-md-end text-muted col-md-2 col-lg-4">
+          Breed
+        </label>
+        <div class="col-md-10 col-lg-8"
+        >
+          <p id="horseBreed" class="col-form-label col-md-2 col-lg-4">{{horse.breed.name}}</p>
+        </div>
+      </div>
+    </div>
+    <!-- End sex row -->
+  </div>
+
+  <div class="row">
+    <!-- Start height and weight row -->
+    <div class="mb-2 col-lg-6">
+      <div class="row"><label for="horseHeight" class="col-form-label text-md-end text-muted col-md-2 col-lg-4">
+        Height [m]
+      </label>
+        <div class="col-md-10 col-lg-8"
+        >
+          <p id="horseHeight" class="col-form-label col-md-2 col-lg-4">{{horse.height}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="mb-2 col-lg-6">
+      <div class="row"><label for="horseWeight" class="col-form-label text-md-end text-muted col-md-2 col-lg-4">
+        Weight [kg]
+      </label>
+        <div class="col-md-10 col-lg-8"
+        >
+          <p id="horseWeight" class="col-form-label col-md-2 col-lg-4">{{horse.weight}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4 d-flex flex-row">
+    <button type="button"
+            class="btn btn-danger"
+            (click)="delete()"
+    >
+      <i class="bi bi-trash"></i>
+      Delete
+    </button>
+
+
+  </div>
+</form>

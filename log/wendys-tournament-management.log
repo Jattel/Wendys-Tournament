@@ -1,0 +1,908 @@
+2024-03-13T19:04:36.207+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] .a.i.SeprIndividualAssignmentApplication : Starting SeprIndividualAssignmentApplication using Java 21.0.2 with PID 17896 (C:\Users\J_lyn\Downloads\Wendys-Tournament-Management-java-template\template-java\Wendys-Tournament-Management\backend\target\classes started by J_lyn in C:\Users\J_lyn\Downloads\Wendys-Tournament-Management-java-template)
+2024-03-13T19:04:36.221+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] .a.i.SeprIndividualAssignmentApplication : The following 1 profile is active: "datagen"
+2024-03-13T19:04:37.287+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-13T19:04:37.301+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-13T19:04:37.301+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-13T19:04:37.342+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-13T19:04:37.342+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1073 ms
+2024-03-13T19:04:37.369+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-13T19:04:37.670+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./wendydb user=SA
+2024-03-13T19:04:37.672+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-13T19:04:37.680+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:./wendydb'
+2024-03-13T19:04:37.729+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] a.a.t.s.a.i.p.DataGeneratorBean          : Generating data…
+2024-03-13T19:04:37.766+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] a.a.t.s.a.i.p.DataGeneratorBean          : Finished generating data without error.
+2024-03-13T19:04:38.163+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-13T19:04:38.171+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [main] .a.i.SeprIndividualAssignmentApplication : Started SeprIndividualAssignmentApplication in 2.356 seconds (process running for 2.935)
+2024-03-13T19:05:09.325+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-13T19:05:09.326+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-13T19:05:09.327+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-13T19:05:09.334+01:00 r=a92e53150ff5 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-1] a.a.t.s.a.individual.config.LogFilter    : >>> GET /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T19:05:09.379+01:00 r=a92e53150ff5 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-1] a.a.t.s.a.individual.rest.HorseEndpoint  : GET /horses
+2024-03-13T19:05:09.453+01:00 r=a92e53150ff5 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-1] a.a.t.s.a.individual.config.LogFilter    : <<< GET /horses status=200 time=118ms
+2024-03-13T19:05:09.585+01:00 r=25a77cdd2685 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.config.LogFilter    : >>> GET /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T19:05:09.587+01:00 r=25a77cdd2685 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.rest.HorseEndpoint  : GET /horses
+2024-03-13T19:05:09.590+01:00 r=25a77cdd2685 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.config.LogFilter    : <<< GET /horses status=200 time=4ms
+2024-03-13T19:49:28.417+01:00 r=2f7773125855 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-9] a.a.t.s.a.individual.config.LogFilter    : >>> GET /breeds?name=gyhg&limit=5 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T19:49:28.422+01:00 r=2f7773125855 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-9] a.a.t.s.a.individual.rest.BreedEndpoint  : GET /breeds
+2024-03-13T19:49:28.426+01:00 r=2f7773125855 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-9] a.a.t.s.a.individual.config.LogFilter    : <<< GET /breeds?name=gyhg&limit=5 status=200 time=7ms
+2024-03-13T19:49:32.169+01:00 r=19d5a7ee1750 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] a.a.t.s.a.individual.config.LogFilter    : >>> GET /breeds?name=kug&limit=5 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T19:49:32.171+01:00 r=19d5a7ee1750 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] a.a.t.s.a.individual.rest.BreedEndpoint  : GET /breeds
+2024-03-13T19:49:32.172+01:00 r=19d5a7ee1750 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] a.a.t.s.a.individual.config.LogFilter    : <<< GET /breeds?name=kug&limit=5 status=200 time=2ms
+2024-03-13T19:50:03.635+01:00 r=01e5a3c8f15f ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-6] a.a.t.s.a.individual.config.LogFilter    : >>> GET /breeds?name=humb&limit=5 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T19:50:03.635+01:00 r=01e5a3c8f15f ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-6] a.a.t.s.a.individual.rest.BreedEndpoint  : GET /breeds
+2024-03-13T19:50:03.637+01:00 r=01e5a3c8f15f ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-6] a.a.t.s.a.individual.config.LogFilter    : <<< GET /breeds?name=humb&limit=5 status=200 time=2ms
+2024-03-13T19:50:04.150+01:00 r=374b999dae1a ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-7] a.a.t.s.a.individual.config.LogFilter    : >>> GET /breeds?name=humbo&limit=5 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T19:50:04.150+01:00 r=374b999dae1a ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-7] a.a.t.s.a.individual.rest.BreedEndpoint  : GET /breeds
+2024-03-13T19:50:04.152+01:00 r=374b999dae1a ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-7] a.a.t.s.a.individual.config.LogFilter    : <<< GET /breeds?name=humbo&limit=5 status=200 time=1ms
+2024-03-13T19:50:04.588+01:00 r=bdf70438901b ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] a.a.t.s.a.individual.config.LogFilter    : >>> GET /breeds?name=humboc&limit=5 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T19:50:04.589+01:00 r=bdf70438901b ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] a.a.t.s.a.individual.rest.BreedEndpoint  : GET /breeds
+2024-03-13T19:50:04.590+01:00 r=bdf70438901b ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] a.a.t.s.a.individual.config.LogFilter    : <<< GET /breeds?name=humboc&limit=5 status=200 time=2ms
+2024-03-13T19:50:04.984+01:00 r=68080a450b5c ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-4] a.a.t.s.a.individual.config.LogFilter    : >>> GET /breeds?name=humbock&limit=5 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T19:50:04.985+01:00 r=68080a450b5c ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-4] a.a.t.s.a.individual.rest.BreedEndpoint  : GET /breeds
+2024-03-13T19:50:04.986+01:00 r=68080a450b5c ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-4] a.a.t.s.a.individual.config.LogFilter    : <<< GET /breeds?name=humbock&limit=5 status=200 time=2ms
+2024-03-13T20:03:57.269+01:00 r=fb006f64661e ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-1] a.a.t.s.a.individual.config.LogFilter    : >>> GET /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:03:57.271+01:00 r=fb006f64661e ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-1] a.a.t.s.a.individual.rest.HorseEndpoint  : GET /horses
+2024-03-13T20:03:57.277+01:00 r=fb006f64661e ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-1] a.a.t.s.a.individual.config.LogFilter    : <<< GET /horses status=200 time=7ms
+2024-03-13T20:03:57.572+01:00 r=e33cc6ec1c25 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.config.LogFilter    : >>> GET /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:03:57.573+01:00 r=e33cc6ec1c25 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.rest.HorseEndpoint  : GET /horses
+2024-03-13T20:03:57.579+01:00 r=e33cc6ec1c25 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.config.LogFilter    : <<< GET /horses status=200 time=6ms
+2024-03-13T20:21:41.059+01:00 r=a91c7f807b15 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-9] a.a.t.s.a.individual.config.LogFilter    : >>> OPTIONS /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:21:41.074+01:00 r=a91c7f807b15 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-9] a.a.t.s.a.individual.config.LogFilter    : <<< OPTIONS /horses status=200 time=14ms
+2024-03-13T20:21:41.077+01:00 r=34921d871c49 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:21:41.152+01:00 r=34921d871c49 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:21:41.161+01:00 r=34921d871c49 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=200 time=83ms
+2024-03-13T20:21:41.162+01:00 r= ip= ERROR 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+at.ac.tuwien.sepr.assignment.individual.exception.FatalException: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:47) ~[classes/:na]
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.lambda$create$0(HorseJdbcDao.java:118) ~[classes/:na]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:656) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1001) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.create(HorseJdbcDao.java:110) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao$$SpringCGLIB$$0.create(<generated>) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.service.HorseServiceImpl.create(HorseServiceImpl.java:77) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.rest.HorseEndpoint.post(HorseEndpoint.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	... 41 common frames omitted
+
+2024-03-13T20:35:58.767+01:00 r=5047d275a744 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-6] a.a.t.s.a.individual.config.LogFilter    : >>> GET /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:35:58.769+01:00 r=5047d275a744 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-6] a.a.t.s.a.individual.rest.HorseEndpoint  : GET /horses
+2024-03-13T20:35:58.773+01:00 r=5047d275a744 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-6] a.a.t.s.a.individual.config.LogFilter    : <<< GET /horses status=200 time=6ms
+2024-03-13T20:35:59.069+01:00 r=2c439b4401cb ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-7] a.a.t.s.a.individual.config.LogFilter    : >>> GET /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:35:59.070+01:00 r=2c439b4401cb ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-7] a.a.t.s.a.individual.rest.HorseEndpoint  : GET /horses
+2024-03-13T20:35:59.073+01:00 r=2c439b4401cb ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-7] a.a.t.s.a.individual.config.LogFilter    : <<< GET /horses status=200 time=3ms
+2024-03-13T20:36:12.107+01:00 r=58918f96ac20 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:36:12.109+01:00 r=58918f96ac20 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:36:12.109+01:00 r=58918f96ac20 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=200 time=1ms
+2024-03-13T20:36:12.110+01:00 r= ip= ERROR 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+at.ac.tuwien.sepr.assignment.individual.exception.FatalException: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:47) ~[classes/:na]
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.lambda$create$0(HorseJdbcDao.java:118) ~[classes/:na]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:656) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1001) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.create(HorseJdbcDao.java:110) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao$$SpringCGLIB$$0.create(<generated>) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.service.HorseServiceImpl.create(HorseServiceImpl.java:77) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.rest.HorseEndpoint.post(HorseEndpoint.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	... 41 common frames omitted
+
+2024-03-13T20:36:27.084+01:00 r=ddc53e821aa7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-4] a.a.t.s.a.individual.config.LogFilter    : >>> GET /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:36:27.086+01:00 r=ddc53e821aa7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-4] a.a.t.s.a.individual.rest.HorseEndpoint  : GET /horses
+2024-03-13T20:36:27.090+01:00 r=ddc53e821aa7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-4] a.a.t.s.a.individual.config.LogFilter    : <<< GET /horses status=200 time=5ms
+2024-03-13T20:36:27.387+01:00 r=6dd1a1999590 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-10] a.a.t.s.a.individual.config.LogFilter    : >>> GET /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:36:27.388+01:00 r=6dd1a1999590 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-10] a.a.t.s.a.individual.rest.HorseEndpoint  : GET /horses
+2024-03-13T20:36:27.389+01:00 r=6dd1a1999590 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-10] a.a.t.s.a.individual.config.LogFilter    : <<< GET /horses status=200 time=3ms
+2024-03-13T20:37:53.649+01:00 r=90405900aee7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:37:53.650+01:00 r=90405900aee7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:37:53.651+01:00 r=90405900aee7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=200 time=1ms
+2024-03-13T20:37:53.651+01:00 r= ip= ERROR 17896 --- [wendys-tournament-management] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+at.ac.tuwien.sepr.assignment.individual.exception.FatalException: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:47) ~[classes/:na]
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.lambda$create$0(HorseJdbcDao.java:118) ~[classes/:na]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:656) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1001) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.create(HorseJdbcDao.java:110) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao$$SpringCGLIB$$0.create(<generated>) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.service.HorseServiceImpl.create(HorseServiceImpl.java:77) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.rest.HorseEndpoint.post(HorseEndpoint.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	... 41 common frames omitted
+
+2024-03-13T20:41:03.822+01:00 r=0ae5c2d635bc ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-3] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:41:03.823+01:00 r=0ae5c2d635bc ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-3] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:41:03.824+01:00 r=0ae5c2d635bc ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-3] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=200 time=2ms
+2024-03-13T20:41:03.825+01:00 r= ip= ERROR 17896 --- [wendys-tournament-management] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+at.ac.tuwien.sepr.assignment.individual.exception.FatalException: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:47) ~[classes/:na]
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.lambda$create$0(HorseJdbcDao.java:118) ~[classes/:na]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:656) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1001) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.create(HorseJdbcDao.java:110) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao$$SpringCGLIB$$0.create(<generated>) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.service.HorseServiceImpl.create(HorseServiceImpl.java:77) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.rest.HorseEndpoint.post(HorseEndpoint.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	... 41 common frames omitted
+
+2024-03-13T20:42:15.872+01:00 r=8183709a28a7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-9] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:42:15.873+01:00 r=8183709a28a7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-9] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:42:15.874+01:00 r=8183709a28a7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-9] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=200 time=1ms
+2024-03-13T20:42:15.874+01:00 r= ip= ERROR 17896 --- [wendys-tournament-management] [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+at.ac.tuwien.sepr.assignment.individual.exception.FatalException: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:47) ~[classes/:na]
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.lambda$create$0(HorseJdbcDao.java:118) ~[classes/:na]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:656) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1001) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.create(HorseJdbcDao.java:110) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao$$SpringCGLIB$$0.create(<generated>) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.service.HorseServiceImpl.create(HorseServiceImpl.java:77) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.rest.HorseEndpoint.post(HorseEndpoint.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	... 41 common frames omitted
+
+2024-03-13T20:42:33.289+01:00 r=5dba62575094 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:42:33.290+01:00 r=5dba62575094 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:42:33.291+01:00 r=5dba62575094 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=200 time=1ms
+2024-03-13T20:42:33.291+01:00 r= ip= ERROR 17896 --- [wendys-tournament-management] [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+at.ac.tuwien.sepr.assignment.individual.exception.FatalException: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:47) ~[classes/:na]
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.lambda$create$0(HorseJdbcDao.java:118) ~[classes/:na]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:656) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1001) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.create(HorseJdbcDao.java:110) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao$$SpringCGLIB$$0.create(<generated>) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.service.HorseServiceImpl.create(HorseServiceImpl.java:77) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.rest.HorseEndpoint.post(HorseEndpoint.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	... 41 common frames omitted
+
+2024-03-13T20:42:43.722+01:00 r=8fb2fbf01837 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-6] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:42:43.723+01:00 r=8fb2fbf01837 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-6] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:42:43.724+01:00 r=8fb2fbf01837 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-6] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=200 time=1ms
+2024-03-13T20:42:43.724+01:00 r= ip= ERROR 17896 --- [wendys-tournament-management] [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+at.ac.tuwien.sepr.assignment.individual.exception.FatalException: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:47) ~[classes/:na]
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.lambda$create$0(HorseJdbcDao.java:118) ~[classes/:na]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:656) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1001) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.create(HorseJdbcDao.java:110) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao$$SpringCGLIB$$0.create(<generated>) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.service.HorseServiceImpl.create(HorseServiceImpl.java:77) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.rest.HorseEndpoint.post(HorseEndpoint.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	... 41 common frames omitted
+
+2024-03-13T20:42:49.185+01:00 r=0b2ce8ccc3d7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-7] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:42:49.186+01:00 r=0b2ce8ccc3d7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-7] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:42:49.187+01:00 r=0b2ce8ccc3d7 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-7] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=200 time=1ms
+2024-03-13T20:42:49.187+01:00 r= ip= ERROR 17896 --- [wendys-tournament-management] [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+at.ac.tuwien.sepr.assignment.individual.exception.FatalException: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:47) ~[classes/:na]
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.lambda$create$0(HorseJdbcDao.java:118) ~[classes/:na]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:656) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1001) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.create(HorseJdbcDao.java:110) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao$$SpringCGLIB$$0.create(<generated>) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.service.HorseServiceImpl.create(HorseServiceImpl.java:77) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.rest.HorseEndpoint.post(HorseEndpoint.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	... 41 common frames omitted
+
+2024-03-13T20:42:56.257+01:00 r=b6e554062810 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:42:56.257+01:00 r=b6e554062810 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:42:56.259+01:00 r=b6e554062810 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=200 time=1ms
+2024-03-13T20:42:56.259+01:00 r= ip= ERROR 17896 --- [wendys-tournament-management] [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+at.ac.tuwien.sepr.assignment.individual.exception.FatalException: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:47) ~[classes/:na]
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.lambda$create$0(HorseJdbcDao.java:118) ~[classes/:na]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:656) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1001) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.create(HorseJdbcDao.java:110) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao$$SpringCGLIB$$0.create(<generated>) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.service.HorseServiceImpl.create(HorseServiceImpl.java:77) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.rest.HorseEndpoint.post(HorseEndpoint.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	... 41 common frames omitted
+
+2024-03-13T20:47:53.466+01:00 r=415ea5b7a1b3 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-4] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:47:53.468+01:00 r=415ea5b7a1b3 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-4] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:47:53.469+01:00 r=415ea5b7a1b3 ip=0:0:0:0:0:0:0:1  INFO 17896 --- [wendys-tournament-management] [http-nio-8080-exec-4] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=200 time=2ms
+2024-03-13T20:47:53.469+01:00 r= ip= ERROR 17896 --- [wendys-tournament-management] [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+at.ac.tuwien.sepr.assignment.individual.exception.FatalException: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at at.ac.tuwien.sepr.assignment.individual.config.LogFilter.doFilterInternal(LogFilter.java:47) ~[classes/:na]
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "at.ac.tuwien.sepr.assignment.individual.dto.BreedDto.id()" because the return value of "at.ac.tuwien.sepr.assignment.individual.dto.HorseDetailDto.breed()" is null
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.lambda$create$0(HorseJdbcDao.java:118) ~[classes/:na]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:656) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1001) ~[spring-jdbc-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao.create(HorseJdbcDao.java:110) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.4.jar:6.1.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.4.jar:6.1.4]
+	at at.ac.tuwien.sepr.assignment.individual.persistence.impl.HorseJdbcDao$$SpringCGLIB$$0.create(<generated>) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.service.HorseServiceImpl.create(HorseServiceImpl.java:77) ~[classes/:na]
+	at at.ac.tuwien.sepr.assignment.individual.rest.HorseEndpoint.post(HorseEndpoint.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	... 41 common frames omitted
+
+2024-03-13T20:55:22.303+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-13T20:55:22.305+01:00 r= ip=  INFO 17896 --- [wendys-tournament-management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-13T20:57:56.587+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] .a.i.SeprIndividualAssignmentApplication : Starting SeprIndividualAssignmentApplication using Java 21.0.2 with PID 12616 (C:\Users\J_lyn\Downloads\Wendys-Tournament-Management-java-template\template-java\Wendys-Tournament-Management\backend\target\classes started by J_lyn in C:\Users\J_lyn\Downloads\Wendys-Tournament-Management-java-template)
+2024-03-13T20:57:56.588+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] .a.i.SeprIndividualAssignmentApplication : The following 1 profile is active: "datagen"
+2024-03-13T20:57:57.396+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-13T20:57:57.407+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-13T20:57:57.407+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-13T20:57:57.445+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-13T20:57:57.446+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 818 ms
+2024-03-13T20:57:57.468+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-13T20:57:57.703+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./wendydb user=SA
+2024-03-13T20:57:57.704+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-13T20:57:57.714+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:./wendydb'
+2024-03-13T20:57:57.767+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] a.a.t.s.a.i.p.DataGeneratorBean          : Generating data…
+2024-03-13T20:57:57.783+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] a.a.t.s.a.i.p.DataGeneratorBean          : Finished generating data without error.
+2024-03-13T20:57:58.094+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-13T20:57:58.100+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [main] .a.i.SeprIndividualAssignmentApplication : Started SeprIndividualAssignmentApplication in 1.896 seconds (process running for 2.395)
+2024-03-13T20:58:18.936+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-13T20:58:18.936+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-13T20:58:18.937+01:00 r= ip=  INFO 12616 --- [wendys-tournament-management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-13T20:58:18.942+01:00 r=7fb91c519df9 ip=0:0:0:0:0:0:0:1  INFO 12616 --- [wendys-tournament-management] [http-nio-8080-exec-1] a.a.t.s.a.individual.config.LogFilter    : >>> OPTIONS /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:58:18.962+01:00 r=7fb91c519df9 ip=0:0:0:0:0:0:0:1  INFO 12616 --- [wendys-tournament-management] [http-nio-8080-exec-1] a.a.t.s.a.individual.config.LogFilter    : <<< OPTIONS /horses status=200 time=18ms
+2024-03-13T20:58:18.964+01:00 r=f9627aae86af ip=0:0:0:0:0:0:0:1  INFO 12616 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.config.LogFilter    : >>> POST /horses UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+2024-03-13T20:58:19.038+01:00 r=f9627aae86af ip=0:0:0:0:0:0:0:1  INFO 12616 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.rest.HorseEndpoint  : POST /horses
+2024-03-13T20:58:19.040+01:00 r=f9627aae86af ip=0:0:0:0:0:0:0:1  WARN 12616 --- [wendys-tournament-management] [http-nio-8080-exec-2] .a.t.s.a.i.r.ApplicationExceptionHandler : Terminating request processing with status 422 due to ValidationException: Validation of horse for creation failed. Failed validations: Horse's gender is not valid., Horse birthday lays in the future., Height can not be bigger than or as big as 10000.00..
+2024-03-13T20:58:19.057+01:00 r=f9627aae86af ip=0:0:0:0:0:0:0:1  WARN 12616 --- [wendys-tournament-management] [http-nio-8080-exec-2] a.a.t.s.a.individual.config.LogFilter    : <<< POST /horses status=422 time=92ms
